@@ -1,0 +1,84 @@
+
+body {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-family: 'Golos Text';
+  
+  color: #ffffff;
+  text-align: center;
+}
+
+.boldtext {
+  font-weight: 600;
+  width: 100%;
+}
+
+#ocherednoy {
+  margin: 2vh 0 0 0;
+}
+
+#inlineitmo {
+  height: 0.97em;
+}
+
+#years {
+  display: inline-block;       /* respect width settings */
+    text-align: right;           
+    font-feature-settings: "tnum" 1;
+    font-variant-numeric: tabular-nums;
+    text-align: left;
+}
+.smoltext {
+  font-size: clamp(0.7rem, 4vw, 1.2rem);
+}
+
+
+@keyframes bg-gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    to {
+        background-position: 0% 50%
+    }
+}
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #0d0d0d;
+  overflow: hidden;
+}
+.grid {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    linear-gradient(#282828 1px, transparent 1px),
+    linear-gradient(90deg, #282828 1px, transparent 1px);
+  background-size: 52px 52px; /* adjust spacing */
+  z-index: 1;
+}
+
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+a:checked {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a:hover {
+  cursor: pointer;
+}

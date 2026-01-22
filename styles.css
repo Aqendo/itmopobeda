@@ -51,10 +51,9 @@ html, body {
   margin: 0;
   height: 100%;
   background-color: #0d0d0d;
-  overflow: hidden;
 }
 .grid {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background-image:
     linear-gradient(#282828 1px, transparent 1px),

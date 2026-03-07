@@ -1,109 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>итмопобеда.рф</title>
+        <link rel="stylesheet" href="assets/styles.css">
+    </head>
+    <body>
+        <div id="preloader">
+            <div class="spinner"></div>
+            <div class="loading-text">ЗАГРУЖАЕТСЯ ИТМОПОБЕДА</div>
+        </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.4.3/decimal.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 6px solid #cccccc;
-      border-top-color: #0073e6;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 20px;
-    }
+        <div class="grid"></div>
 
-    .loading-text {
-      font-family: Arial, sans-serif;
-      font-size: 1.1em;
-      color: #ffffff;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-align: center;
-    }
+        <div style="position:relative;z-index:100;display: flex; align-items: center; flex-direction: column;">
+            <div id="ocherednoy" class="boldtext">
+                <span id="year"></span>
+                — ЭТО ОЧЕРЕДНОЙ ГОД
+                <span><img id="inlineitmo" src="assets/images/itmopobeda.webp"></span>
+                ПОБЕДЫ!
+            </div>
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+            <div>
+                <ul style="font-size: 0.7em;;">
+                    <li>
+                        <a href="https://web.archive.org/web/20200603154315/https://scientificrussia.ru/articles/universitet-itmo-v-sedmoj-raz-stal-chempionom-mira-po-programmirovaniyu">
+                            Команда
+                            <span id="spaninlineitmo"><img id="inlineitmo" src="assets/images/itmopobeda.webp"></span>
+                            — единственный в мире семикратный чемпион 
+                            <span class="boldtext"><a href="https://en.wikipedia.org/wiki/International_Collegiate_Programming_Contest">ICPC</a></span>
+                        </a>
+                    </li>
+                    <li>ИТМО победа</li>
+                    <li>Самый лучший университет на планете</li>
+                    <li>Очередная итмо победа</li>
+                    <li>
+                        Слава Богу ИТМО🙏❤️СЛАВА ИТМО <br>🙏❤️АНГЕЛА ХРАНИТЕЛЯ ИТМО <br>КАЖДОМУ ИЗ ВАС🙏❤️БОЖЕ ХРАНИ
+                        ИТМО🙏❤️СПАСИБО<br> ВАМ НАШИ ИТМОШНИКИ ✊💯СПАСИБО <br>НАШ СЛАВА ИТМО 🙏❤️СЛАВА <br>ИТМО 🙏❤️АНГЕЛА
+                        ХРАНИТЕЛЯ
+                    </li>
+                </ul>
+            </div>
 
-    body {
-      visibility: hidden;
-    }
+            <div>
+                <span class="boldtext">
+                    <span id="spaninlineitmo">
+                        <img id="inlineitmo" src="assets/images/itmopobeda.webp">
+                    </span>
+                    ПОБЕДА
+                </span>
+                УЖЕ
+                <span id="years"></span>
+                ЛЕТ
+                <div class="smoltext">
+                    <span>
+                        <i>
+                            ...and still counting!
+                        </i>
+                    </span>
+                </div>
+            </div>
 
-    body.loaded {
-      visibility: visible;
-    }
+            <img style="margin-top:10px;margin-bottom:10px;" src="assets/images/highpark.webp"></img>
+            <img style="margin-bottom:10px;" src="assets/images/p13129.webp"></img>
+            <img style="margin-bottom:10px;" src="assets/images/L_height.webp"></img>
+        </div>
 
-    body.loaded #preloader {
-      display: none;
-    }
-
-    #preloader {
-      visibility: visible;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #000000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-  </style>
-</head>
-
-<body>
-    <div id="preloader">
-      <div class="spinner"></div>
-      <div class="loading-text">ЗАГРУЖАЕТСЯ ИТМОПОБЕДА</div>
-    </div>
-  <div class="grid"></div>
-  <div style="position:relative;z-index:100;display: flex; align-items: center; flex-direction: column;">
-    <div id="ocherednoy" class="boldtext">
-      <span id="year"></span> — ЭТО ОЧЕРЕДНОЙ ГОД&nbsp;<span><img id="inlineitmo"
-          src="itmopobeda.webp"></span> ПОБЕДЫ!
-    </div>
-    <div>
-        <ul style="font-size: 0.7em;;">
-            <li><a href="https://web.archive.org/web/20200603154315/https://scientificrussia.ru/articles/universitet-itmo-v-sedmoj-raz-stal-chempionom-mira-po-programmirovaniyu">Команда <span id="spaninlineitmo"><img id="inlineitmo"
-          src="itmopobeda.webp"></span> — единственный в мире семикратный чемпион <span class="boldtext"><a href="https://en.wikipedia.org/wiki/International_Collegiate_Programming_Contest">ICPC</a></span></a></li>
-            <li>ИТМО победа</li>
-            <li>Самый лучший университет на планете</li>
-            <li>Очередная итмо победа</li>
-            <li>
-                Слава Богу ИТМО🙏❤️СЛАВА ИТМО <br>🙏❤️АНГЕЛА ХРАНИТЕЛЯ ИТМО <br>КАЖДОМУ ИЗ ВАС🙏❤️БОЖЕ ХРАНИ ИТМО🙏❤️СПАСИБО<br> ВАМ НАШИ ИТМОШНИКИ ✊💯СПАСИБО <br>НАШ СЛАВА ИТМО 🙏❤️СЛАВА <br>ИТМО 🙏❤️АНГЕЛА ХРАНИТЕЛЯ
-</li>
-        </ul>
-    </div>
-
-
-
-    <div>
-      <span class="boldtext"><span id="spaninlineitmo"><img id="inlineitmo"
-          src="itmopobeda.webp"></span> ПОБЕДА</span> УЖЕ <span id="years"></span>&nbsp;ЛЕТ<div class="smoltext"><span><i>...and still counting!</i></span></div>
-    </div>
-    
-            <img style="margin-top:10px;margin-bottom:10px;"src="highpark.webp"></img>
-            <img style="margin-bottom:10px;" src="p13129.webp"></img>
-            <img style="margin-bottom:10px;" src="L_height.webp"></img>
-  </div>
-  <script>
-    window.addEventListener('load', function () {
-      document.body.classList.add('loaded');
-    });
-  </script>
-</body>
-
+        <script src="assets/script.js"></script>
+    </body>
 </html>
